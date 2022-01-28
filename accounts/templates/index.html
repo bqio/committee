@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Авторизация в личном кабинете{% endblock %}
+
+{% block content %}
+<h2>Авторизация в личном кабинете</h2>
+<form method="post">
+  {% for field in form %}
+  <p>
+    <label>{{ field.label }}:</label>
+    {{ field }}
+  </p>
+  {% endfor %}
+  <input type="submit" value="Войти">
+  <a href="{% url 'add' %}"><input type="button" value="Создать аккаунт"></a>
+</form>
+{% endblock %}
